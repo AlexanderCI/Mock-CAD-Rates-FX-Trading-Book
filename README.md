@@ -1,12 +1,12 @@
 # Mock CAD Rates, FX, and Trading-Book Pricing Prototype
 
-This is a student project I built to practise the kind of basic pricing, PnL, and risk work that might sit around a rates / FX desk.
+Hi guys! This is a student project I built to practice the kind of basic pricing or PnL or risk work that might sit around a rates/FX desk.
 
-It is **not** a real trading system. It uses fake trades and fake market data. I made it more like a small desk support tool: trade inputs go in, the script checks the blotter, prices positions, looks at PnL, compares dealer quotes, and writes some simple reports.
+It is by NO means a real trading system!!! It uses fake trades and fake market data. I made it more like a small desk support tool (trade inputs go in, then the script checks the blotter and prices positions, looks at PnL, compares dealer quotes, and then writes some simple reports).
 
-I made this because I wanted something more practical than just writing about fixed income or liquidity risk. This repo is basically me trying to connect the concepts from actuarial / financial math coursework to a mock front-office workflow.
+I made this because I wanted something more practical than just writing about fixed income or liquidity risk. This repo is basically trying to connect the concepts from actuarial/financial math coursework to a mock front-office workflow.
 
-## What it does
+## What it essentially does
 
 The project covers a small mock book with:
 
@@ -16,7 +16,7 @@ The project covers a small mock book with:
 - bond forwards
 - interest-rate futures
 
-The script produces:
+My code produces:
 
 - trade blotter checks
 - position valuation
@@ -30,9 +30,9 @@ The script produces:
 
 ## Why this is still a mock project
 
-A real desk would have proper market data feeds, curves, confirmations, settlement systems, risk engines, approvals, and a lot more controls. I obviously do not have that here.
+Obviously, a real desk would have proper market data feeds and curves and confirmations and a lot more controls. I obviously do not have that here.
 
-So I kept this as a clean student version:
+So, I kept this as a clean student version, which only deals with:
 
 - mock trade data
 - manually supplied market data
@@ -41,8 +41,6 @@ So I kept this as a clean student version:
 - simplified bond forward pricing
 - no live market data
 - no actual execution
-
-Still, the point is to show that I understand the workflow pieces: trade data, pricing inputs, risk numbers, quote comparison, and daily reporting.
 
 ## Repo layout
 
@@ -69,13 +67,12 @@ excel/
 
 docs/
   model_notes.md               notes on assumptions and limitations
-  resume_bullet_version.md     resume bullets based on the repo
 
 outputs/
   reports get written here after running the script
 ```
 
-## How to run it
+## How to run it!
 
 Install the small set of packages:
 
@@ -103,28 +100,17 @@ After running it, the main files are:
 - `outputs/limit_breaches.csv`
 - `outputs/desk_pack.txt`
 
-## Notes on the modelling
+## Important notes on the modelling itself:
 
-I am not claiming the pricing is institutional-grade.
+I think it's quite clear by now that I am not claiming the pricing is revolutionary.
 
-For bonds, I use basic discounted cash flow pricing and calculate duration / convexity from cash flows.
+For bonds, I used basic discounted cash flow pricing and calculate duration / convexity from cash flows.
 
-For FX spot and forwards, I use the supplied rates and forward points. I am not building a full cross-currency curve here.
+For FX spot and forwards, I used the supplied rates and forward points (not building a full cross-currency curve here)
 
-For swaps, I use a simplified fixed-vs-floating approximation from a flat/interpolated curve rate. It is enough for a mock project, but not how a real swap book would be priced.
+For swaps, I used a simplified fixed-vs-floating approximation from a flat/interpolated curve rate (not NECESSARILY how a real swap book would be priced, if im not mistaken!!!).
 
-For VaR and ES, I use a simple historical shock file. Again, not perfect, but useful for showing how the risk report could work.
+For VaR and ES, I used a simple historical shock file. Again, not perfect, but good enough for showing how the risk report could work.
 
-## Resume version
+Enjoy!
 
-The clean resume wording for this project would be:
-
-> Built a simulated CAD rates, FX, and trading-book pricing prototype using mock trade data, covering Government of Canada bonds, FX spot/forwards, interest-rate swaps, bond forwards, and futures.
-
-> Calculated mark-to-market PnL, DV01, duration, convexity, FX exposure, VaR, Expected Shortfall, and risk-limit usage across a mock front-office book.
-
-> Built dealer quote comparison and blotter-control checks to flag stale prices, missing inputs, duplicate trade IDs, off-market quotes, and limit breaches before report output.
-
-## Disclaimer
-
-This repo is for learning and job-application evidence only. It is not investment advice, not a trading system, and not connected to any real bank or trading desk.

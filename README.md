@@ -1,4 +1,4 @@
-# Mock CAD Rates, FX, and Trading-Book Pricing Prototype
+# Mock CAD Rates, FX, and Trading-Book Pricing
 
 Hi guys! This is a student project I built to practice the kind of basic pricing or PnL or risk work that might sit around a rates/FX desk.
 
